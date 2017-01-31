@@ -32,9 +32,9 @@ galaxy_info:
   # platform on this list, let us know and we'll get it added!
   #
   platforms:
-  #- name: OpenBSD
-  #  versions:
-  #  - all
+  - name: OpenBSD
+    versions:
+    - all
   #  - 5.6
   #  - 5.7
   #  - 5.8
@@ -103,9 +103,9 @@ galaxy_info:
   #  - 2013.09
   #  - 2016.03
   #  - 2016.09
-  #- name: ArchLinux
-  #  versions:
-  #  - all
+  - name: ArchLinux
+    versions:
+    - all
   #  - any
   #- name: FreeBSD
   #  versions:
@@ -152,9 +152,9 @@ galaxy_info:
   #  - squeeze
   #  - stretch
   #  - wheezy
-  #- name: Alpine
-  #  versions:
-  #  - all
+  - name: Alpine
+    versions:
+    - all
   #  - any
   #- name: EL
   #  versions:
@@ -194,9 +194,9 @@ galaxy_info:
   #  versions:
   #  - all
   #  - any
-  #- name: Solaris
-  #  versions:
-  #  - all
+  - name: Solaris
+    versions:
+    - all
   #  - 10
   #  - 11.0
   #  - 11.1
