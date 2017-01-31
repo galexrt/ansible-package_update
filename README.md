@@ -8,7 +8,7 @@ A simple Ansible role to update your system. It updates all your packages on the
 Requirements
 ------------
 
-No requirements.
+No special requirements.
 
 Role Variables
 --------------
