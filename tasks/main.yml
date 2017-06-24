@@ -3,6 +3,8 @@
   fail:
     msg: "Invalid Ansible apt upgrade mode given."
   when: upgrade_mode is defined and (upgrade_mode != "no" and upgrade_mode != "yes" and upgrade_mode != "safe" and upgrade_mode != "full" and upgrade_mode != "dist")
+  tags:
+    - package_update
 
 - name: Upgrade all packages (rhel and others)
   action: "{{ ansible_pkg_mgr }}"
@@ -10,6 +12,15 @@
     name: '*'
     state: latest
   when: ansible_distribution != "Debian" and ansible_distribution != "Ubuntu"
+  tags:
+    - package_update
+
+- name: Install aptitude if necessary (deb)
+  apt:
+    name: aptitude
+    state: latest
+    update_cache: yes
+  when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
   tags:
     - package_update
 
