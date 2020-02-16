@@ -7,8 +7,7 @@
     - package_update
 
 - name: Upgrade all packages (rhel and others)
-  action: "{{ ansible_pkg_mgr }}"
-  args:
+  package:
     name: '*'
     state: latest
   when: ansible_distribution != "Debian" and ansible_distribution != "Ubuntu"
