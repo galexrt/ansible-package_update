@@ -18,7 +18,7 @@
   apt:
     name: aptitude
     state: latest
-    update_cache: yes
+    update_cache: true
   when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
   tags:
     - package_update
@@ -27,7 +27,7 @@
   apt:
     state: latest
     upgrade: "{% if upgrade_mode is defined %}{{ upgrade_mode }}{% else %}safe{% endif %}"
-    update_cache: yes
+    update_cache: true
   when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
   tags:
     - package_update
